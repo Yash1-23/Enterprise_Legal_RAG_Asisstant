@@ -204,8 +204,50 @@ These sections outline the punishments for being a thug, non-treatment of a vict
 ]
 }
 
+## How to Run the Project
+
+This project follows a two-step execution flow:
+the backend RAG service is started first, followed by the Streamlit UI.
+
+### Step 1: Start the Backend Service (FastAPI)
+
+1. Clone the repository
+   git clone https://github.com/your-username/enterprise-legal-rag.git
+   cd enterprise-legal-rag
+
+2. Create and activate virtual environment
+   python -m venv venv
+   source venv/bin/activate   # Windows: venv\Scripts\activate
+
+3. Install dependencies
+   pip install -r requirements.txt
+
+4. Start the FastAPI backend
+   uvicorn app.main:app --reload
+
+The API will be available at:
+http://127.0.0.1:8000
+
+Swagger UI:
+http://127.0.0.1:8000/docs
+
+
+### Step 2: Start the Frontend (Streamlit)
+
+1. Open a new terminal window (keep FastAPI running)
+
+2. Run the Streamlit application
+   streamlit run app.py
+
+3. Access the UI at:
+http://localhost:8501
+
+The Streamlit frontend communicates with the FastAPI backend to process
+legal queries using the RAG pipeline.
+
 
   
+
 
 
 
