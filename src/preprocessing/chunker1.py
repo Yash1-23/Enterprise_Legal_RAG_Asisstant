@@ -9,8 +9,7 @@ OUTPUT_CHUNKS_DIR = os.path.join("data","chunks_v2")
 
 MAX_CHARS = 800
 
-#Section pattern 
-#SECTION_PATTERN = re.compile(  )
+
 
 STRUCTURAL_KEYWORDS =[
    "ARRANGEMENT OF SECTIONS",
@@ -125,7 +124,7 @@ def chunk_section(section: Dict, law: str, source_file: str) -> List[Dict]:
     return chunks
 
 
-# ================= MAIN =================
+ 
 
 def run_chunking():
     os.makedirs(OUTPUT_CHUNKS_DIR, exist_ok=True)
@@ -179,4 +178,5 @@ def run_chunking():
 if __name__ == "__main__":
     run_chunking()
   
+
   
